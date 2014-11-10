@@ -7,7 +7,7 @@
     = csrf_meta_tags
 
   %body
-    = render :partial => 'login'
+    = render :partial => 'sessions/login'
     %h1.title Rotten Potatoes!
     #main
       - if flash[:notice]
