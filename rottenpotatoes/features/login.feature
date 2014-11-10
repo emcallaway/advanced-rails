@@ -15,4 +15,4 @@ Scenario: Logged in
   Given I am logged in as "Alice"
   When I go to the RottenPotatoes home page
   Then I should see "Welcome, Alice!"
-  And I should see "Log Out"
+  And I should have "Log Out" button

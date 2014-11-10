@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
     #redirect_to login_path() and return unless @current_user
   end
 
+  private
+  if Rails.env.test?
+    prepend_before_filter :stub_current_user
+    def stub_current_user
+      session[:user_id] ||= cookies[:stub_user_id] 
+    end
+  end
+
 end
